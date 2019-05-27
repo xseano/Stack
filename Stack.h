@@ -8,9 +8,19 @@
 #include "LinkedList.h"
 
 template <typename T>
-class Stack: public LinkedList<T>
+class Stack: protected LinkedList<T>
 {
     public:
+
+        bool empty()
+        {
+            return this->isEmpty();
+        }
+
+        int frequencyOf(T data)
+        {
+            return this->getFrequencyOf(data);
+        }
 
         void display()
         {
@@ -27,9 +37,20 @@ class Stack: public LinkedList<T>
             cout << "--------" << endl;
         }
 
-        void pop(T data)
+        void pop()
         {
-            this->removeNode(data);
+            std::vector<T> list = this->reverseVector();
+            T top = list[0];
+
+            this->removeNode(top);
+        }
+
+        T peek()
+        {
+            std::vector<T> list = this->reverseVector();
+            T top = list[0];
+
+            return top;
         }
 
         void push(T data)

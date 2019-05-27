@@ -9,9 +9,9 @@ int main()
 {
     Stack<type>* ST = new Stack<type>();
 
-    if (ST->isEmpty())
+    if (ST->empty())
     {
-        cout << "\n--------\nNew Queue\n";
+        cout << "\n--------\nNew Stack";
     }
 
     ST->push(1.87);
@@ -21,10 +21,10 @@ int main()
     ST->push(3.64);
     ST->display();
 
-    cout << "Removing 2.94 and 3.17 from the queue..";
+    cout << "The top of the stack is currently: " << ST->peek() << endl;
 
-    ST->pop(2.94);
-    ST->pop(3.17);
+    cout << "Removing the top of this stack..";
+    ST->pop();
     ST->display();
 
     cout << "Lets add another 1.87..";
@@ -32,7 +32,7 @@ int main()
     ST->display();
 
     cout << "Wait.. how many times is 1.87 referenced in the queue?" << endl;
-    cout << "Looks like 1.87 has " << ST->getFrequencyOf(1.87) << " occurences in the queue!" << endl;
+    cout << "Looks like 1.87 has " << ST->frequencyOf(1.87) << " occurences in the queue!" << endl;
 
     return 0;
 }
