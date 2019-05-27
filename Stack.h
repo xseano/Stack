@@ -12,14 +12,14 @@ class Stack: protected LinkedList<T>
 {
     public:
 
-        bool empty()
+        bool isEmpty()
         {
-            return this->isEmpty();
+            return this->LinkedList<T>::isEmpty();
         }
 
-        int frequencyOf(T data)
+        int getFrequencyOf(T data)
         {
-            return this->getFrequencyOf(data);
+            return this->LinkedList<T>::getFrequencyOf(data);
         }
 
         void display()

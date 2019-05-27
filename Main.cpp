@@ -9,7 +9,7 @@ int main()
 {
     Stack<type>* ST = new Stack<type>();
 
-    if (ST->empty())
+    if (ST->isEmpty())
     {
         cout << "\n--------\nNew Stack";
     }
@@ -32,7 +32,7 @@ int main()
     ST->display();
 
     cout << "Wait.. how many times is 1.87 referenced in the queue?" << endl;
-    cout << "Looks like 1.87 has " << ST->frequencyOf(1.87) << " occurences in the queue!" << endl;
+    cout << "Looks like 1.87 has " << ST->getFrequencyOf(1.87) << " occurences in the queue!" << endl;
 
     return 0;
 }
